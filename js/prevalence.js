@@ -453,8 +453,10 @@ function make_slides(f) {
       this.generic = generic;
 
       // var contexthtml = this.format_context(generic.PreceedingContext);
-      var contexthtml = generic.Intro + generic.SAPrompt_part1	+ generic.SAPrompt_part2;
-      var entirehtml = "<font color=#FF0000> " + generic.Target; //this.format_sentence(generic.EntireSentence)
+      var contexthtml = "testing"
+      // generic.Intro + generic.SAPrompt_part1	+ generic.SAPrompt_part2;
+      var entirehtml = "<font color=#FF0000> " + "target sentence"
+      // generic.Target; //this.format_sentence(generic.EntireSentence)
 
 
       contexthtml = contexthtml + entirehtml
@@ -629,9 +631,9 @@ function init() {
   exp.trials = [];
   exp.catch_trials = [];
   var stimuli = generate_stim(); // this calls a function in stimuli.js
-  exp.QParaphrase = { name: "Q" };
-  exp.RParaphrase = { name: "R" };
-  exp.AParaphrase = { name: "A" };
+  exp.QParaphrase = { name: "Quest" };
+  exp.RParaphrase = { name: "Req" };
+  exp.AParaphrase = { name: "Ass" };
   exp.paraphraseArray = _.shuffle([exp.QParaphrase, exp.RParaphrase, exp.AParaphrase]);
   console.log("paraarray: " + exp.paraphraseArray[1].value);
   console.log(stimuli.length);
@@ -653,7 +655,7 @@ function init() {
   };
   //blocks of the experiment:
   exp.structure = [
-    "bot",
+    // "bot",
     // "i0",
     // "instructions_slider",
     // "example1",
