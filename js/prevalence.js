@@ -457,7 +457,7 @@ function make_slides(f) {
       var entirehtml = "<font color=#FF0000> " + generic.Target //this.format_sentence(generic.EntireSentence)
 
 
-      contexthtml = entirehtml
+      // contexthtml = entirehtml
       exp.QParaphrase.value = generic.QResponse
       exp.RParaphrase.value = generic.RResponse
       exp.AParaphrase.value = generic.AResponse
@@ -629,11 +629,11 @@ function init() {
   exp.trials = [];
   exp.catch_trials = [];
   var stimuli = generate_stim(); // this calls a function in stimuli.js
-  exp.QParaphrase = { name: "the" };
-  exp.RParaphrase = { name: "a" };
-  exp.AParaphrase = { name: "all" };
+  exp.QParaphrase = { name: "Q" };
+  exp.RParaphrase = { name: "R" };
+  exp.AParaphrase = { name: "A" };
   exp.paraphraseArray = _.shuffle([exp.QParaphrase, exp.RParaphrase, exp.AParaphrase]);
-  // console.log("paraarray: " + exp.paraphraseArray[1].value);
+  console.log("paraarray: " + exp.paraphraseArray[1].value);
   console.log(stimuli.length);
   //exp.stimuli = _.shuffle(stimuli).slice(0, 15);
   exp.stimuli = stimuli.slice();
@@ -654,12 +654,12 @@ function init() {
   //blocks of the experiment:
   exp.structure = [
     "bot",
-    "i0",
-    "instructions_slider",
-    "example1",
-    "example2",
-    "example3",
-    "example4",
+    // "i0",
+    // "instructions_slider",
+    // "example1",
+    // "example2",
+    // "example3",
+    // "example4",
     "startExp",
     "generateEntities",// This is where the test trials come in.
     "subj_info",
