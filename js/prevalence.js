@@ -457,7 +457,7 @@ function make_slides(f) {
       var entirehtml = "<font color=#FF0000> " + generic.Target //this.format_sentence(generic.EntireSentence)
 
 
-      contexthtml = entirehtml
+      contexthtml = contexthtml + entirehtml
       exp.QParaphrase.value = generic.QResponse
       exp.RParaphrase.value = generic.RResponse
       exp.AParaphrase.value = generic.AResponse
