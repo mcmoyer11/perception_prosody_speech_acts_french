@@ -453,9 +453,9 @@ function make_slides(f) {
       this.generic = generic;
 
       // var contexthtml = this.format_context(generic.PreceedingContext);
-      var contexthtml = "testing"
+      var contexthtml = this,format_context(generic.Intro);
       // generic.Intro + generic.SAPrompt_part1	+ generic.SAPrompt_part2;
-      var entirehtml = "<font color=#FF0000> " + "target sentence"
+      var entirehtml = "<font color=#FF0000> " + this.format_sentence(generic.Target)
       // generic.Target; //this.format_sentence(generic.EntireSentence)
 
 
@@ -497,49 +497,49 @@ function make_slides(f) {
       $(".context").html(contexthtml);
     },
 
-    // // speakers 1 and 2 
-    // format_context: function (context) {
-    //   // remove all ### standing alone
-    //   contexthtml = context.replace(/###/g, " ");
-    //   // replace first three ## with Speaker 1
-    //   contexthtml = contexthtml.replace(/speakera(\d+)./g, "<br><b>Speaker #1: </b>");
-    //   contexthtml = contexthtml.replace(/speakerb(\d+)./g, "<br><b>Speaker #2: </b>");
-    //   contexthtml = contexthtml.replace(/speakera./g, "<br><b>Speaker #1: </b>");
-    //   contexthtml = contexthtml.replace(/speakerb./g, "<br><b>Speaker #2: </b>");
-    //   // remove the traces
-    //   contexthtml = contexthtml.replace(/\*t*\**\-(\d+)/g, "");
-    //   // remove random asterisks
-    //   contexthtml = contexthtml.replace(/\*/g, "");
-    //   // remove the random 0
-    //   contexthtml = contexthtml.replace(/0/g, "");
+    // speakers 1 and 2 
+    format_context: function (context) {
+      // remove all ### standing alone
+      contexthtml = context.replace(/###/g, " ");
+      // replace first three ## with Speaker 1
+      contexthtml = contexthtml.replace(/speakera(\d+)./g, "<br><b>Speaker #1: </b>");
+      contexthtml = contexthtml.replace(/speakerb(\d+)./g, "<br><b>Speaker #2: </b>");
+      contexthtml = contexthtml.replace(/speakera./g, "<br><b>Speaker #1: </b>");
+      contexthtml = contexthtml.replace(/speakerb./g, "<br><b>Speaker #2: </b>");
+      // remove the traces
+      contexthtml = contexthtml.replace(/\*t*\**\-(\d+)/g, "");
+      // remove random asterisks
+      contexthtml = contexthtml.replace(/\*/g, "");
+      // remove the random 0
+      contexthtml = contexthtml.replace(/0/g, "");
 
 
-    //   // this just deals with the first instance of speaker
-    //   if (!contexthtml.startsWith("<br><b>Speaker #")) {
-    //     var ssi = contexthtml.indexOf("Speaker #");
-    //     switch (contexthtml[ssi + "Speaker #".length]) {
-    //       case "1":
-    //         contexthtml = "<br><b>Speaker #2:</b> " + contexthtml;
-    //         break;
-    //       case "2":
-    //         contexthtml = "<br><b>Speaker #1:</b> " + contexthtml;
-    //         break;
-    //       default:
-    //         break;
-    //     }
-    //   };
-    //   return contexthtml;
-    // },
+      // this just deals with the first instance of speaker
+      if (!contexthtml.startsWith("<br><b>Speaker #")) {
+        var ssi = contexthtml.indexOf("Speaker #");
+        switch (contexthtml[ssi + "Speaker #".length]) {
+          case "1":
+            contexthtml = "<br><b>Speaker #2:</b> " + contexthtml;
+            break;
+          case "2":
+            contexthtml = "<br><b>Speaker #1:</b> " + contexthtml;
+            break;
+          default:
+            break;
+        }
+      };
+      return contexthtml;
+    },
 
-    // format_sentence: function (sentence) {
-    //   // remove the traces
-    //   entirehtml = sentence.replace(/\*t*\**\-(\d+)/g, "");
-    //   entirehtml = entirehtml.replace(/\*ich/g, "");
-    //   entirehtml = entirehtml.replace(/ich/g, "");
-    //   entirehtml = entirehtml.replace(/0/g, "");
-    //   entirehtml = entirehtml.replace(/\*/g, "");
-    //   return entirehtml
-    // },
+    format_sentence: function (sentence) {
+      // remove the traces
+      entirehtml = sentence.replace(/\*t*\**\-(\d+)/g, "");
+      entirehtml = entirehtml.replace(/\*ich/g, "");
+      entirehtml = entirehtml.replace(/ich/g, "");
+      entirehtml = entirehtml.replace(/0/g, "");
+      entirehtml = entirehtml.replace(/\*/g, "");
+      return entirehtml
+    },
 
     button: function () {
       // this.response = response;
