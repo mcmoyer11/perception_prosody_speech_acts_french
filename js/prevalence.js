@@ -424,22 +424,22 @@ function make_slides(f) {
   //   }
   // });
 
-  // slides.startExp = slide({
-  //   name: "startExp",
-  //   start: function () {
-  //     $("#instrunctionGen").html('<table class=table1 id="instructionGen"> </table>');
-  //     var dispRow = $(document.createElement('tr')).attr("id", 'rowp' + 1);
-  //     dispRow.append("<div class=row>");
-  //     dispRow.append("<div align=center><button class=continueButton onclick= _s.button()>Continue</button></div>");
-  //     dispRow.append('<td/>');
-  //     dispRow.append('</div>');
-  //     dispRow.appendTo("#instructionGen");
+  slides.startExp = slide({
+    name: "startExp",
+    start: function () {
+      $("#instrunctionGen").html('<table class=table1 id="instructionGen"> </table>');
+      var dispRow = $(document.createElement('tr')).attr("id", 'rowp' + 1);
+      dispRow.append("<div class=row>");
+      dispRow.append("<div align=center><button class=continueButton onclick= _s.button()>Continue</button></div>");
+      dispRow.append('<td/>');
+      dispRow.append('</div>');
+      dispRow.appendTo("#instructionGen");
 
-  //   },
-  //   button: function () {
-  //     exp.go(); //use exp.go() if and only if there is no "present" data.
-  //   },
-  // });
+    },
+    button: function () {
+      exp.go(); //use exp.go() if and only if there is no "present" data.
+    },
+  });
 
   // test items
   slides.generateEntities = slide({
@@ -453,7 +453,7 @@ function make_slides(f) {
       this.generic = generic;
 
       // var contexthtml = this.format_context(generic.PreceedingContext);
-      // var contexthtml = this.format_context(generic.Intro) + generic.SAPrompt_part1	+ generic.SAPrompt_part2;
+      var contexthtml = generic.Intro + generic.SAPrompt_part1	+ generic.SAPrompt_part2;
       var entirehtml = "<font color=#FF0000> " + generic.Target //this.format_sentence(generic.EntireSentence)
 
 
