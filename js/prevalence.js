@@ -453,7 +453,10 @@ function make_slides(f) {
       this.generic = generic;
 
       // var contexthtml = this.format_context(generic.PreceedingContext);
-      var entirehtml = "<font color=#FF0000> " + generic.EntireSentence //this.format_sentence(generic.EntireSentence)
+      // var contexthtml = this.format_context(generic.Intro) + generic.SAPrompt_part1	+ generic.SAPrompt_part2;
+      var entirehtml = "<font color=#FF0000> " + generic.Target //this.format_sentence(generic.EntireSentence)
+
+
       contexthtml = entirehtml
       exp.QParaphrase.value = generic.QResponse
       exp.RParaphrase.value = generic.RResponse
@@ -463,6 +466,7 @@ function make_slides(f) {
         $(`#sent5_${i + 1}`).text(exp.paraphraseArray[i].value)
       }
 
+      // Make sure the values of the sliders sum to 1
       var callback = function () {
 
         var total = ($("#slider5_1").slider("option", "value") +
@@ -484,7 +488,7 @@ function make_slides(f) {
       utils.make_slider("#slider5_3", callback);
       // utils.make_slider("#slider5_4", callback);
 
-      for (i = 0; i < 4; i++) {
+      for (i = 0; i < 3; i++) {
         $("#slider5_" + (i + 1)).slider("value", 0)
       }
 
