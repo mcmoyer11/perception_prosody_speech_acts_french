@@ -461,9 +461,9 @@ function make_slides(f) {
 
 
       contexthtml = contexthtml + entirehtml
-      exp.QParaphrase.value = generic.QResponse
-      exp.RParaphrase.value = generic.RResponse
-      exp.AParaphrase.value = generic.AResponse
+      exp.QParaphrase.value = "Question"//generic.QResponse
+      exp.RParaphrase.value = "Request" //generic.RResponse
+      exp.AParaphrase.value = "Assertion" //generic.AResponse
 
       for (i = 0; i < 3; i++) {
         $(`#sent5_${i + 1}`).text(exp.paraphraseArray[i].value)
