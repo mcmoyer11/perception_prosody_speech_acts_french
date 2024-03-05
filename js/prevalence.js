@@ -188,8 +188,7 @@ function make_slides(f) {
 
       var contexthtml = generic.Intro + "<br>" + generic.SAPrompt_part1 + "<br>" + generic.SAPrompt_part2;
       // var contexthtml = "Test";
-      var entirehtml = "<br><font color=#FF0000>" + generic.Target;
-
+      var entirehtml = "VOUS :" + "<br><font color=#FF0000>" + generic.Target + "<br> JORDAN :" + generic.Answer;
 
       contexthtml = contexthtml + entirehtml
       exp.QParaphrase.value = generic.QResponse

@@ -111,8 +111,10 @@
     <h3>Instructions</h3>
     <p id="instruct-text" align="left">On the following pages, you will see several sentences in red text. 
       <br><br>
-      
+      Vous allez voir de petits dialogues entre vous et un ami, comme le suivant :
       After reading the sentence, consider the three statements below, 
+
+
       and rate how likely you think it is that the speaker who asked the question in red text wanted to know each of the following questions.
       If you think that all of the questions are unlikely, you can indicate this by giving the fourth option, "something else", a high rating. 
       To rate the questions, use the sliders to distribute 100 points across the three questions and "something else". 
@@ -349,10 +351,9 @@
 
   <div class="slide" id="generateEntities">
     <p class="context" style="text-align: left;"></p>
-    <div id="intruction3" class="instruction"><i>Based on the sentence in red, how likely do you think it is that
-      the speaker wanted to know about each of the following?</i></div>
-    <p class="err">Please make sure that the four ratings sum to 100!</p>
-    <table>
+    <div id="intruction3" class="instruction"><i>D'aprèsle scenario, que pensez-vous que le locuteur veut dire vraiment avec la phrase en rouge ? </i></div>
+    <p class="err">Assurez-vous que la somme des trois notes est égale à 100 !</p>
+    <table> 
       <tr>
         <td><strong><span class="display_condition" id="sent5_1">{}</span></strong></td>
         <td><div style="width:275px; padding: 15px; margin: 0 auto; overflow: hidden;">
@@ -398,14 +399,16 @@
       <label><input type="radio" name="assess" value="Yes" />Yes</label>
       <label><input type="radio" name="assess" value="Confused" />I was confused</label>
 
-      <p>Gender:
+      <p>Genre:
         <select id="gender">
           <label>
             <option value="" /></label>
           <label>
-            <option value="Male" />Male</label>
+            <option value="Male" />Masculin</label>
           <label>
-            <option value="Female" />Female</label>
+            <option value="Female" />Féminin</label>
+          <label>
+            <option value="Non-binary" />Non-binaire</label>
           <label>
             <option value="Other" />Other</label>
         </select>
