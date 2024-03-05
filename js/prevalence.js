@@ -96,8 +96,7 @@ function make_slides(f) {
       var callback = function () {
         var total = ($("#slider1_1").slider("option", "value") +
           $("#slider1_2").slider("option", "value") +
-          $("#slider1_3").slider("option", "value") +
-          $("#slider1_4").slider("option", "value"));
+          $("#slider1_3").slider("option", "value"));
 
         if (total > 1.0) {
           var other_total = total - $(this).slider("option", "value");
@@ -111,9 +110,8 @@ function make_slides(f) {
       utils.make_slider("#slider1_1", callback);
       utils.make_slider("#slider1_2", callback);
       utils.make_slider("#slider1_3", callback);
-      utils.make_slider("#slider1_4", callback);
 
-      for (i = 0; i < 4; i++) {
+      for (i = 0; i < 3; i++) {
         $("#slider1_" + (i + 1)).slider("value", 0)
       }
 
@@ -127,8 +125,7 @@ function make_slides(f) {
 
       var total = ($("#slider1_1").slider("option", "value") +
         $("#slider1_2").slider("option", "value") +
-        $("#slider1_3").slider("option", "value") +
-        $("#slider1_4").slider("option", "value"));
+        $("#slider1_3").slider("option", "value"));
 
       console.log("total: ", total)
 
@@ -313,7 +310,8 @@ function make_slides(f) {
         "slide_number_in_experiment": exp.phase,
         "ItemNumber": this.generic.ItemID,
         "paraphrase": "other",
-        "rating": $("#slider5_4").slider("option", "value"),
+        "rating": $("#slider5_3").slider("option", "value"),
+        // "rating": $("#slider5_4").slider("option", "value"),
         "order": exp.paraphraseArray[0].name + "-" + exp.paraphraseArray[1].name + "-" + exp.paraphraseArray[2].name,
       });
     }
