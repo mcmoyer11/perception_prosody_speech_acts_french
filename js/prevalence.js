@@ -400,7 +400,7 @@ function init() {
     // "example2",
     // "example3",
     // "example4",
-    "startExp",
+    // "startExp",
     "generateEntities",// This is where the test trials come in.
     "subj_info",
     "thanks"
