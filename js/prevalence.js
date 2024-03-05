@@ -74,355 +74,92 @@ function make_slides(f) {
     },
   });
 
-  // slides.example1 = slide({
-  //   name: "example1",
-
-  //   start: function () {
-  //     $(".err").hide();
-  //     $(".err_answer").hide();
-
-  //     // var contexthtml = "<b>Speaker #1</b>: We need to promote this fundraiser as widely as possible. Do you have a list of the people involved in helping with outreach? <br> <b>Speaker #2 </b>: Yes, here it is. <br> <b>Speaker #1 </b>: "
-  //     var entirehtml = "<font color=#FF0000> " + "Who can help spread the word?"
-  //     contexthtml = entirehtml
-  //     exp.QParaphrase.value = "Who is the person...?"
-  //     exp.RParaphrase.value = "Who is a person...?"
-  //     // exp.someParaphrase.value = "Who is some person...?"
-  //     exp.AParaphrase.value = "Who is every person...?"
-
-  //     for (i = 0; i < 3; i++) {
-  //       $(`#sent1_${i + 1}`).text(exp.paraphraseArray[i].value)
-  //     }
-
-  //     var callback = function () {
-  //       var total = ($("#slider1_1").slider("option", "value") +
-  //         $("#slider1_2").slider("option", "value") +
-  //         $("#slider1_3").slider("option", "value") +
-  //         $("#slider1_4").slider("option", "value"));
-
-  //       if (total > 1.0) {
-  //         var other_total = total - $(this).slider("option", "value");
-  //         $(this).slider("option", "value", 1 - other_total);
-  //       }
-
-  //       var perc = Math.round($(this).slider("option", "value") * 100);
-  //       $("#" + $(this).attr("id") + "_val").val(perc);
-
-  //     }
-  //     utils.make_slider("#slider1_1", callback);
-  //     utils.make_slider("#slider1_2", callback);
-  //     utils.make_slider("#slider1_3", callback);
-  //     utils.make_slider("#slider1_4", callback);
-
-  //     for (i = 0; i < 4; i++) {
-  //       $("#slider1_" + (i + 1)).slider("value", 0)
-  //     }
-
-  //     $(".context").html(contexthtml);
-
-  //   }, //end start function
-
-  //   button: function () {
-  //     // this.response = response;
-  //     console.log("clicked button")
-
-  //     var total = ($("#slider1_1").slider("option", "value") +
-  //       $("#slider1_2").slider("option", "value") +
-  //       $("#slider1_3").slider("option", "value") +
-  //       $("#slider1_4").slider("option", "value"));
-
-  //     console.log("total: ", total)
-
-  //     if (total < .99) {
-  //       $(".err").show();
-  //     } else {
-  //       this.log_responses();
-  //       exp.go()
-  //     }
-  //   },
-
-  //   log_responses: function () {
-  //     for (var i = 0; i < 3; i++) {
-  //       exp.data_trials.push({
-  //         "slide_number_in_experiment": exp.phase,
-  //         "ItemNumber": "example1",
-  //         "paraphrase": exp.paraphraseArray[i].name,
-  //         "rating": $("#slider1_" + (i + 1)).slider("option", "value"),
-  //         "order": exp.paraphraseArray[0].name + "-" + exp.paraphraseArray[1].name + "-" + exp.paraphraseArray[2].name,
-  //       });
-  //     }
-  //     exp.data_trials.push({
-  //       "slide_number_in_experiment": exp.phase,
-  //       "ItemNumber": "example1",
-  //       "paraphrase": "other",
-  //       "rating": $("#slider1_4").slider("option", "value"),
-  //       "order": exp.paraphraseArray[0].name + "-" + exp.paraphraseArray[1].name + "-" + exp.paraphraseArray[2].name,
-  //     });
-  //   } // end log_responses
-  // }); 
-
-  // slides.example2 = slide({
-  //   name: "example2",
-
-  //   start: function () {
-  //     $(".err").hide();
-  //     $(".err_answer").hide();
-  //     // $("#str2").prop("checked", false);
-
-  //     // var contexthtml = "<b>Speaker #1</b>: Excuse me, could you help me please? <br> <b>Speaker #2</b>: Sure, how can I help?<br> <b>Speaker #1</b>: "
-  //     var entirehtml = "<font color=#FF0000> " + "Where can I get coffee around here?"
-  //     contexthtml = entirehtml
-
-  //     exp.QParaphrase.value = "What is the place...?"
-  //     exp.RParaphrase.value = "What is a place...?"
-  //     // exp.someParaphrase.value = "What is some place...?"
-  //     exp.AParaphrase.value = "What is every place...?"
-
-  //     for (i = 0; i < 3; i++) {
-  //       $(`#sent2_${i + 1}`).text(exp.paraphraseArray[i].value)
-  //     }
-
-  //     var callback = function () {
-  //       var total = ($("#slider2_1").slider("option", "value") +
-  //         $("#slider2_2").slider("option", "value") +
-  //         $("#slider2_3").slider("option", "value") +
-  //         $("#slider2_4").slider("option", "value"));
-
-  //       if (total > 1.0) {
-  //         var other_total = total - $(this).slider("option", "value");
-  //         $(this).slider("option", "value", 1 - other_total);
-  //       }
-
-  //       var perc = Math.round($(this).slider("option", "value") * 100);
-  //       $("#" + $(this).attr("id") + "_val").val(perc);
-
-  //     }
-  //     utils.make_slider("#slider2_1", callback);
-  //     utils.make_slider("#slider2_2", callback);
-  //     utils.make_slider("#slider2_3", callback);
-  //     utils.make_slider("#slider2_4", callback);
-
-  //     for (i = 0; i < 4; i++) {
-  //       $("#slider2_" + (i + 1)).slider("value", 0)
-  //     }
-
-  //     $(".context").html(contexthtml);
-
-  //     $(".err").hide();
-
-  //   },
-  //   button: function () {
-  //     console.log("clicked button")
-
-  //     var total = ($("#slider2_1").slider("option", "value") +
-  //       $("#slider2_2").slider("option", "value") +
-  //       $("#slider2_3").slider("option", "value") +
-  //       $("#slider2_4").slider("option", "value"));
-
-  //     console.log("total: ", total)
-
-  //     if (total < .99) {
-  //       $(".err").show();
-  //     } else {
-  //       this.log_responses();
-  //       exp.go()
-  //     }
-  //   },
-
-  //   log_responses: function () {
-  //     for (var i = 0; i < 3; i++) {
-  //       exp.data_trials.push({
-  //         "slide_number_in_experiment": exp.phase,
-  //         "ItemNumber": "example2",
-  //         "paraphrase": exp.paraphraseArray[i].name,
-  //         "rating": $("#slider2_" + (i + 1)).slider("option", "value"),
-  //         "order": exp.paraphraseArray[0].name + "-" + exp.paraphraseArray[1].name + "-" + exp.paraphraseArray[2].name,
-  //       });
-  //     }
-  //     exp.data_trials.push({
-  //       "slide_number_in_experiment": exp.phase,
-  //       "ItemNumber": "example2",
-  //       "paraphrase": "other",
-  //       "rating": $("#slider2_4").slider("option", "value"),
-  //       "order": exp.paraphraseArray[0].name + "-" + exp.paraphraseArray[1].name + "-" + exp.paraphraseArray[2].name,
-  //     });
-  //   }
-  // });
-
-  // slides.example3 = slide({
-  //   name: "example3",
-
-  //   start: function () {
-  //     $('.err').hide();
-  //     $('.err_answer').hide();
-  //     // $("#str3").prop("checked", false);
-
-  //     // var contexthtml = "<b>Speaker #1</b>: The party last night was packed, and everyone there was interesting! <br> <b>Speaker #2</b>: I wish I could have gone, but I had to study. "
-  //     var entirehtml = "<font color=#FF0000> " + "Who came to the party?"
-  //     contexthtml = entirehtml
-
-  //     exp.RParaphrase.value = "Who is a person...?"
-  //     exp.QParaphrase.value = "Who is the person...?"
-  //     // exp.someParaphrase.value = "Who is some person...?"
-  //     exp.AParaphrase.value = "Who is every person...?"
-
-  //     for (i = 0; i < 3; i++) {
-  //       $(`#sent3_${i + 1}`).text(exp.paraphraseArray[i].value)
-  //     }
-
-  //     var callback = function () {
-  //       var total = ($("#slider3_1").slider("option", "value") +
-  //         $("#slider3_2").slider("option", "value") +
-  //         $("#slider3_3").slider("option", "value") +
-  //         $("#slider3_4").slider("option", "value"));
-
-  //       if (total > 1.0) {
-  //         var other_total = total - $(this).slider("option", "value");
-  //         $(this).slider("option", "value", 1 - other_total);
-  //       }
-
-  //       var perc = Math.round($(this).slider("option", "value") * 100);
-  //       $("#" + $(this).attr("id") + "_val").val(perc);
-
-  //     }
-  //     utils.make_slider("#slider3_1", callback);
-  //     utils.make_slider("#slider3_2", callback);
-  //     utils.make_slider("#slider3_3", callback);
-  //     utils.make_slider("#slider3_4", callback);
-
-  //     for (i = 0; i < 4; i++) {
-  //       $("#slider3_" + (i + 1)).slider("value", 0)
-  //     }
-
-  //     $(".context").html(contexthtml);
-
-  //     $(".err").hide();
-  //   },
-
-  //   button: function () {
-  //     // this.response = response;
-  //     console.log("clicked button")
-
-  //     var total = ($("#slider3_1").slider("option", "value") +
-  //       $("#slider3_2").slider("option", "value") +
-  //       $("#slider3_3").slider("option", "value") +
-  //       $("#slider3_4").slider("option", "value"));
-
-  //     console.log("total: ", total)
-
-  //     if (total < .99) {
-  //       $(".err").show();
-  //     } else {
-  //       this.log_responses();
-  //       exp.go()
-  //     }
-  //   },
-
-  //   log_responses: function () {
-  //     for (var i = 0; i < 3; i++) {
-  //       exp.data_trials.push({
-  //         "slide_number_in_experiment": exp.phase,
-  //         "ItemNumber": "example3",
-  //         "paraphrase": exp.paraphraseArray[i].name,
-  //         "rating": $("#slider3_" + (i + 1)).slider("option", "value"),
-  //         "order": exp.paraphraseArray[0].name + "-" + exp.paraphraseArray[1].name + "-" + exp.paraphraseArray[2].name,
-  //       });
-  //     }
-  //     exp.data_trials.push({
-  //       "slide_number_in_experiment": exp.phase,
-  //       "ItemNumber": "example3",
-  //       "paraphrase": "other",
-  //       "rating": $("#slider3_4").slider("option", "value"),
-  //       "order": exp.paraphraseArray[0].name + "-" + exp.paraphraseArray[1].name + "-" + exp.paraphraseArray[2].name,
-  //     });
-  //   }
-  // });
-
-  // slides.example4 = slide({
-  //   name: "example4",
-
-  //   start: function () {
-  //     $(".err").hide();
-  //     $(".err_answer").hide();
-
-  //     // var contexthtml = "<b>Speaker #1</b>: I can't read this map. <br> <b>Speaker #2</b>: What do you need?<br> <b>Speaker #1</b>: "
-  //     var entirehtml = "<font color=#FF0000> " + "How do I get to Central Park?"
-  //     contexthtml = entirehtml
-
-  //     exp.QParaphrase.value = "What is the way...?"
-  //     exp.RParaphrase.value = "What is a way...?"
-  //     exp.AParaphrase.value = "What is every way...?"
-
-  //     for (i = 0; i < 3; i++) {
-  //       $(`#sent4_${i + 1}`).text(exp.paraphraseArray[i].value)
-  //     }
-
-  //     var callback = function () {
-  //       var total = ($("#slider4_1").slider("option", "value") +
-  //         $("#slider4_2").slider("option", "value") +
-  //         $("#slider4_3").slider("option", "value") +
-  //         $("#slider4_4").slider("option", "value"));
-
-  //       if (total > 1.0) {
-  //         var other_total = total - $(this).slider("option", "value");
-  //         $(this).slider("option", "value", 1 - other_total);
-  //       }
-
-  //       var perc = Math.round($(this).slider("option", "value") * 100);
-  //       $("#" + $(this).attr("id") + "_val").val(perc);
-
-  //     }
-  //     utils.make_slider("#slider4_1", callback);
-  //     utils.make_slider("#slider4_2", callback);
-  //     utils.make_slider("#slider4_3", callback);
-  //     utils.make_slider("#slider4_4", callback);
-
-  //     for (i = 0; i < 4; i++) {
-  //       $("#slider4_" + (i + 1)).slider("value", 0)
-  //     }
-
-  //     $(".context").html(contexthtml);
-
-  //     $(".err").hide();
-  //   },
-
-  //   button: function () {
-  //     // this.response = response;
-  //     console.log("clicked button")
-
-  //     var total = ($("#slider4_1").slider("option", "value") +
-  //       $("#slider4_2").slider("option", "value") +
-  //       $("#slider4_3").slider("option", "value") +
-  //       $("#slider4_4").slider("option", "value"));
-
-  //     console.log("total: ", total)
-
-  //     if (total < .99) {
-  //       $(".err").show();
-  //     } else {
-  //       this.log_responses();
-  //       exp.go()
-  //     }
-  //   },
-
-  //   log_responses: function () {
-  //     for (var i = 0; i < 3; i++) {
-  //       exp.data_trials.push({
-  //         "slide_number_in_experiment": exp.phase,
-  //         "ItemNumber": "example4",
-  //         "paraphrase": exp.paraphraseArray[i].name,
-  //         "rating": $("#slider4_" + (i + 1)).slider("option", "value"),
-  //         "order": exp.paraphraseArray[0].name + "-" + exp.paraphraseArray[1].name + "-" + exp.paraphraseArray[2].name,
-  //       });
-  //     }
-  //     exp.data_trials.push({
-  //       "slide_number_in_experiment": exp.phase,
-  //       "ItemNumber": "example4",
-  //       "paraphrase": "other",
-  //       "rating": $("#slider4_4").slider("option", "value"),
-  //       "order": exp.paraphraseArray[0].name + "-" + exp.paraphraseArray[1].name + "-" + exp.paraphraseArray[2].name,
-  //     });
-  //   }
-  // });
+  slides.example1 = slide({
+    name: "example1",
+
+    start: function () {
+      $(".err").hide();
+      $(".err_answer").hide();
+
+      // var contexthtml = "<b>Speaker #1</b>: We need to promote this fundraiser as widely as possible. Do you have a list of the people involved in helping with outreach? <br> <b>Speaker #2 </b>: Yes, here it is. <br> <b>Speaker #1 </b>: "
+      var entirehtml = "<font color=#FF0000> " + "Who can help spread the word?"
+      contexthtml = entirehtml
+      exp.QParaphrase.value = "Who is the person...?"
+      exp.RParaphrase.value = "Who is a person...?"
+      // exp.someParaphrase.value = "Who is some person...?"
+      exp.AParaphrase.value = "Who is every person...?"
+
+      for (i = 0; i < 3; i++) {
+        $(`#sent1_${i + 1}`).text(exp.paraphraseArray[i].value)
+      }
+
+      var callback = function () {
+        var total = ($("#slider1_1").slider("option", "value") +
+          $("#slider1_2").slider("option", "value") +
+          $("#slider1_3").slider("option", "value") +
+          $("#slider1_4").slider("option", "value"));
+
+        if (total > 1.0) {
+          var other_total = total - $(this).slider("option", "value");
+          $(this).slider("option", "value", 1 - other_total);
+        }
+
+        var perc = Math.round($(this).slider("option", "value") * 100);
+        $("#" + $(this).attr("id") + "_val").val(perc);
+
+      }
+      utils.make_slider("#slider1_1", callback);
+      utils.make_slider("#slider1_2", callback);
+      utils.make_slider("#slider1_3", callback);
+      utils.make_slider("#slider1_4", callback);
+
+      for (i = 0; i < 4; i++) {
+        $("#slider1_" + (i + 1)).slider("value", 0)
+      }
+
+      $(".context").html(contexthtml);
+
+    }, //end start function
+
+    button: function () {
+      // this.response = response;
+      console.log("clicked button")
+
+      var total = ($("#slider1_1").slider("option", "value") +
+        $("#slider1_2").slider("option", "value") +
+        $("#slider1_3").slider("option", "value") +
+        $("#slider1_4").slider("option", "value"));
+
+      console.log("total: ", total)
+
+      if (total < .99) {
+        $(".err").show();
+      } else {
+        this.log_responses();
+        exp.go()
+      }
+    },
+
+    log_responses: function () {
+      for (var i = 0; i < 3; i++) {
+        exp.data_trials.push({
+          "slide_number_in_experiment": exp.phase,
+          "ItemNumber": "example1",
+          "paraphrase": exp.paraphraseArray[i].name,
+          "rating": $("#slider1_" + (i + 1)).slider("option", "value"),
+          "order": exp.paraphraseArray[0].name + "-" + exp.paraphraseArray[1].name + "-" + exp.paraphraseArray[2].name,
+        });
+      }
+      exp.data_trials.push({
+        "slide_number_in_experiment": exp.phase,
+        "ItemNumber": "example1",
+        "paraphrase": "other",
+        "rating": $("#slider1_4").slider("option", "value"),
+        "order": exp.paraphraseArray[0].name + "-" + exp.paraphraseArray[1].name + "-" + exp.paraphraseArray[2].name,
+      });
+    } // end log_responses
+  }); 
+
 
   slides.startExp = slide({
     name: "startExp",
