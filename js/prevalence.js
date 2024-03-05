@@ -285,8 +285,8 @@ function make_slides(f) {
 
       var total = ($("#slider5_1").slider("option", "value") +
         $("#slider5_2").slider("option", "value") +
-        $("#slider5_3").slider("option", "value") +
-        $("#slider5_4").slider("option", "value"));
+        $("#slider5_3").slider("option", "value")); 
+        // $("#slider5_4").slider("option", "value")
 
       console.log("total: ", total)
       console.log("slider1: ", $("#slider5_1").slider("option", "value"))
