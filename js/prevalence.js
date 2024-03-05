@@ -264,8 +264,8 @@ function make_slides(f) {
         "slide_number_in_experiment": exp.phase,
         "ItemNumber": this.generic.ItemID,
         "paraphrase": "other",
-        "rating": $("#slider5_3").slider("option", "value"),
-        // "rating": $("#slider5_4").slider("option", "value"),
+        // "rating": $("#slider5_3").slider("option", "value"),
+        "rating": $("#slider5_4").slider("option", "value"),
         "order": exp.paraphraseArray[0].name + "-" + exp.paraphraseArray[1].name + "-" + exp.paraphraseArray[2].name,
       });
     }
