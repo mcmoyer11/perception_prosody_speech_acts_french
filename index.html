@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Language Experiment</title>
+  <title>Experiénce linguistique</title>
 
   <!--JS-->
 
@@ -58,25 +58,25 @@
 </head>
 
 <body onload="init()">
-  <noscript>This task requires JavaScript.</noscript>
+  <noscript>Cette tâche nécessite JavaScript.</noscript>
 
   <div class="slide" id="bot">
-    <h3>Are you a bot?</h3>
+    <h3>Êtes-vous un robot ?</h3>
     <p id="s"></p>
     <p id="q"></p>
     <input type="text" id="text_box" /></question>
     <br><br><br>
     <div class="err1">
-      <p2>Failing this question two more times will disqualify you from this study.</p2>
+      <p2>Si vous ne répondez pas à cette question deux fois de plus, vous serez exclu de l'étude.</p2>
     </div>
     <div class="err2">
-      <p2>Failing this question one more time will disqualify you from this study.</p2>
+      <p2>Si vous ne répondez pas à cette question une fois de plus, vous ne pourrez pas participer à cette étude.</p2>
     </div>
     <div class="disq">
-      <p2>You failed the question and you are disqualified.</p2>
+      <p2>Vous n'avez pas répondu à la question et vous êtes disqualifié.</p2>
     </div>
     <div class="button">
-      <button onclick="_s.button()">Continue</button></div>
+      <button onclick="_s.button()">Continuer</button></div>
   </div>
 
   <div class="slide" id="i0">
@@ -109,16 +109,15 @@
 
   <div class="slide" id="instructions_slider">
     <h3>Instructions</h3>
-    <p id="instruct-text" align="left">On the following pages, you will see several sentences in red text. 
+    <p id="instruct-text" align="left">Dans les pages suivantes, vous verrez plusieurs phrases en texte rouge.
       <br><br>
-      Vous allez voir de petits dialogues entre vous et un ami, comme le suivant :
-      After reading the sentence, consider the three statements below, 
+      Vous allez voir de petits dialogues entre vous et un ami.
+      Après avoir lu les dialgoues, réfléchissez aux trois affirmations ci-dessous, 
+      et évaluez dans quelle mesure vous pensez qu'il est probable que l'orateur qui a dit la phrase en rouge ait voulu dire chacune des propositions suivantes.
 
-
-      and rate how likely you think it is that the speaker who asked the question in red text wanted to know each of the following questions.
-      If you think that all of the questions are unlikely, you can indicate this by giving the fourth option, "something else", a high rating. 
-      To rate the questions, use the sliders to distribute 100 points across the three questions and "something else". 
-      The sliders will automatically snap back if you try to assign more than 100 points. 
+      Si vous pensez que toutes les propositions sont improbables, vous pouvez l'indiquer en cochant la case correspondante, "Aucune de ces propositions ne semble correcte", a high rating. 
+      Pour évaluer les propositions, utilisez les curseurs pour répartir 100 points entre les trois. 
+      Les curseurs reviendront automatiquement en arrière si vous essayez d'attribuer plus de 100 points.
     </p>
     <br><br>
     <div align=center><button class=continueButton onclick=_s.button()>Continue</button></div>
@@ -336,14 +335,10 @@
 
   <div class="slide" id="startExp">
     <br><br>
-    <p id="instruct-text" align="left">Great! Now we can start the real experiment. <br><br> You will now read 30
-      questions.
-      <br><br>Sometimes, the questions below the question in red will sound strange. In this case, make your best guess about how likely you think each of them capture what the
-      speaker wants to know, but you can also give "something else" a higher rating.
-      <br><br> 
-      
-      Note: these are transcripts from real phone conversations so sometimes the text will be a little jumbled. 
-      If you can't figure out what the speaker wants to know, give "something else" a high rating, and move on to the next one.
+    <p id="instruct-text" align="left">Très bien ! Maintenant nous pouvons passer à l'experience. <br><br> 
+      Parfois, les propositions dessous la phrase en rouge pourraient avoir un air bizarre. Dans ce cas, dans ce cas, 
+      faites votre meilleure estimation de la probabilité que chacune d'entre elles traduise ce que l'orateur voulait dire,
+      et vous pouvez également cochez sur "Aucune de ces propositions semble correct", et passez au dialogue suivant.
     </p>
     <br><br>
     <div align=center><button class=continueButton onclick=_s.button()>Continue</button></div>
@@ -379,21 +374,20 @@
           </div></td>
       </tr>
     </table>
-    <!-- <div align="center><button class=click> Aucune de ces option est la meilleure</button></div> -->
-    <font color=#424242> La phrase en rouge à l'air bizarre : <input type="checkbox" id="myCheck"></font>
-    <div align=center><button class=continueButton onclick=_s.button()>Continue</button></div>
+    <font color=#424242>Aucune de ces propositions ne semble correcte : <input type="checkbox" id="myCheck"></font>
+    <div align=center><button class=continueButton onclick=_s.button()>Continuer</button></div>
   </div>
 
   <div class="slide" id="subj_info">
     <div class="long_form">
-      <div class="subj_info_title">Additional information</div>
-      <p class="info">Answering these questions is optional, but will help us understand your answers.</p>
-      <p>Did you read the instructions and do you think you did the HIT correctly?</p>
-      <label><input type="radio" name="assess" value="No" />No</label>
-      <label><input type="radio" name="assess" value="Yes" />Yes</label>
-      <label><input type="radio" name="assess" value="Confused" />I was confused</label>
+      <div class="subj_info_title">Informations complémentaires</div>
+      <p class="info">La réponse à ces questions est facultative, mais elle nous aidera à comprendre vos réponses.</p>
+      <p>Avez-vous lu les instructions et pensez-vous avoir fait le HIT correctement ?</p>
+      <label><input type="radio" name="assess" value="No" />Non</label>
+      <label><input type="radio" name="assess" value="Yes" />Oui</label>
+      <label><input type="radio" name="assess" value="Confused" />J'étais perdu(e)</label>
 
-      <p>Genre:
+      <p>Genre :
         <select id="gender">
           <label>
             <option value="" /></label>
@@ -404,13 +398,13 @@
           <label>
             <option value="Non-binary" />Non-binaire</label>
           <label>
-            <option value="Other" />Other</label>
+            <option value="Other" />Autre</label>
         </select>
       </p>
 
-      <p>Age: <input type="text" id="age" /></p>
+      <p>Âge: <input type="text" id="age" /></p>
 
-      <p>Level Of Education:
+      <p>Niveau d'éducation :
         <select id="education">
           <label>
             <option value="-1" /></label>
@@ -427,51 +421,51 @@
         </select>
       </p>
 
-      <p>Native Language: <input type="text" id="language" /></p>
-      <label>(the language(s) spoken at home when you were a child)</label>
+      <p>Langage maternelle : <input type="text" id="language" /></p>
+      <label>(langue(s) parlée(s) à la maison lorsque vous étiez enfant)</label>
 
-      <p>Do you think the payment was fair?</p>
+      <p>Pensez-vous que le paiement a été équitable ?</p>
       <select id="fairprice">
         <label>
           <option value="-1"></option>
         </label>
         <label>
-          <option value="0">The payment was too little</option>
+          <option value="0">Le paiement était trop faible</option>
         </label>
         <label>
-          <option value="1">The payment was fair</option>
+          <option value="1">Le paiement était équitable</option>
         </label>
       </select>
 
-      <p>Did you enjoy the hit?</p>
+      <p>Avez-vous aimez le HIT ?</p>
       <select id="enjoyment">
         <label>
           <option value="-1"></option>
         </label>
         <label>
-          <option value="0">Worse than the Average HIT</option>
+          <option value="0">Pire que le HIT moyenne</option>
         </label>
         <label>
-          <option value="1">An Average HIT</option>
+          <option value="1">Un HIT moyenne</option>
         </label>
         <label>
-          <option value="2">Better than average HIT</option>
+          <option value="2">Meilleur que le HIT moyenne</option>
         </label>
       </select>
 
-      <p>We would be interested in any comments you have about this experiment. Please type them here:</p>
+      <p>Nous serions intéressés par vos commentairs sur cette expérience, si vous en avez. Veuillez-les écrire ci-dessous:</p>
       <textarea id="comments" rows="3" cols="50"></textarea>
       <br />
-      <button onclick="_s.submit()">Submit</button>
+      <button onclick="_s.submit()">Soumettre</button>
     </div>
   </div>
 
   <div id="thanks" class="slide js">
-    <p class="big">Thanks for your Time!</p>
+    <p class="big">Merci pour votre temps !</p>
   </div>
 
   <div class="progress">
-    <span>Progress:</span>
+    <span>Progrès:</span>
     <div class="bar-wrapper">
       <div class="bar" width="0%">
       </div>

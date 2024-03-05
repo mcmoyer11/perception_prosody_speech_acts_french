@@ -10,8 +10,8 @@ function make_slides(f) {
       exp.speaker = _.shuffle(["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Thomas", "Charles"])[0];
       exp.listener = _.shuffle(["Mary", "Patricia", "Jennifer", "Linda", "Elizabeth", "Barbara", "Susan", "Jessica", "Sarah", "Margaret"])[0];
       exp.lives = 0;
-      var story = exp.speaker + ' says to ' + exp.listener + ': "It\'s a beautiful day, isn\'t it?"'
-      var question = 'Who does ' + exp.speaker + ' talk to?';
+      var story = exp.speaker + ' dit à ' + exp.listener + ': "C\'est une belle journée, n\'est-ce pas ?"'
+      var question = 'À qui parle ' + exp.speaker + ' ?';
       document.getElementById("s").innerHTML = story;
       document.getElementById("q").innerHTML = question;
     },
@@ -345,7 +345,7 @@ function init() {
   exp.structure = [
     // "bot",
     "i0",
-    // "instructions_slider",
+    "instructions_slider",
     // "example1",
     // "example2",
     // "example3",
