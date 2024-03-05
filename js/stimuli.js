@@ -40,25 +40,11 @@ function get_data(fullpath) {
 
 //     return stim;
 
-//     // Push every item from the text file into the array, split on the tab (or whatever split)
-//     for (var i = 1; i < total; i++) {   
-//         var rowData = rows[i].split('\t');
-//         var rowObject = {};
-//         for (var j = 0; j < headings.length; j++) {
-//             rowObject[headings[j]] = rowData[j];
-//         }
-//         data.push(rowObject);
-//     } 
-
-//     console.log("data: ", data);
-
-//     return data;
-
 // }
 
 function generate_stim() {
     var contents = get_data(path);
-    var rows = contents.split('\n');
+    var rows = contents.trim().split('\n');
     var data = [];
 
     // Extract column names from the first row
