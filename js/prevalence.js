@@ -391,7 +391,7 @@ function init() {
   //blocks of the experiment:
   exp.structure = [
     // "bot",
-    // "i0",
+    "i0",
     // "instructions_slider",
     // "example1",
     // "example2",

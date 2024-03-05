@@ -1,7 +1,7 @@
 
 var path = 'https://raw.githubusercontent.com/mcmoyer11/perception_prosody_speech_acts_french/main/files/list_A.txt'
 console.log(path);
- 
+
 function get_data(fullpath) {
     var response = $.ajax({
         type: "GET",
@@ -11,33 +11,47 @@ function get_data(fullpath) {
     });
     return response.responseText;
 }
- 
+
 function generate_stim() {
-   
+
     var contents = get_data(path);
     var raw = contents;
-        var rows = raw.split('\n');
- 
-        var data = [];
-        headings = rows[0].split('\t');
-        var total = rows.length - 1;
+    var rows = raw.split('\n');
+    var data = [];
 
-        // Push every item from the text file into the array, split on the tab (or whatever split)
-        for (var i = 1; i < total; i++) {		
-                data.push(rows[i].split('\t'));
-            } 
+    headings = rows[0].split('\t');
+    var total = rows.length - 1;
 
-        console.log("data: ",data);
- 
-        var stim = data.map(function(row) {
-            return row.reduce(function(result, field, index) {
-                result[headings[index]] = field;
-                return result;
-            }, {});
-        });
+    // Push every item from the text file into the array, split on the tab (or whatever split)
+    // for (var i = 1; i < total; i++) {
+    //     data.push(rows[i].split('\t'));
+    // }
 
-        console.log("stim: ",stim);
-   
-    return stim;
+    // console.log("data: ", data);
+
+    // var stim = data.map(function (row) {
+    //     return row.reduce(function (result, field, index) {
+    //         result[headings[index]] = field;
+    //         return result;
+    //     }, {});
+    // });
+
+    // console.log("stim: ", stim);
+
+    // return stim;
+
+    // Push every item from the text file into the array, split on the tab (or whatever split)
+    for (var i = 1; i < total; i++) {   
+        var rowData = rows[i].split('\t');
+        var rowObject = {};
+        for (var j = 0; j < headings.length; j++) {
+            rowObject[headings[j]] = rowData[j];
+        }
+        data.push(rowObject);
+    } 
+
+    console.log("data: ", data);
+
+    return data;
+
 }
- 
