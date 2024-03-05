@@ -190,10 +190,9 @@ function make_slides(f) {
       this.generic = generic;
 
       // var contexthtml = this.format_context(generic.PreceedingContext);
-      var contexthtml = generic.Intro;
-      var contexthtml = "Test";
-      // generic.Intro + generic.SAPrompt_part1	+ generic.SAPrompt_part2;
-      var entirehtml = "<font color=#FF0000> " + "TARGET SENTENCES" //generic.Target
+      var contexthtml = generic.Intro + generic.SAPrompt_part1	+ generic.SAPrompt_part2;
+      // var contexthtml = "Test";
+      var entirehtml = "<font color=#FF0000> " + generic.Target;
       // generic.Target; //this.format_sentence(generic.EntireSentence)
 
 
